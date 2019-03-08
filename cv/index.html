@@ -1,0 +1,539 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+
+    <title>Frédérique Fortier - Intégratrice / Designer Web</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+
+    <style type="text/css">
+        @import url(
+        https://fonts.googleapis.com/css?family=Lato:400,700|Archivo+Black|Cinzel|Pacifico);
+
+        body {
+            background: #fff;
+            font-family: Lato, sans-serif;
+            margin: 0 0 80px;
+        }
+
+        a {
+            color: #2ecc71;
+        }
+
+        a:focus,
+        a:hover {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+
+        p {
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        p + p {
+            margin-top: 10px;
+        }
+
+        h1{
+            font-family: Pacifico, cursive, serif;
+            font-size: 37px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin-top: 0
+        }
+
+        section {
+            margin-top: 30px;
+        }
+
+        li {
+            line-height: 1.8;
+            list-style: none;
+        }
+
+        li:before {
+            content: "\f052";
+            float: left;
+            font: 13px Octicons;
+            margin-top: 6px;
+            margin-left: -20px;
+            opacity: .1;
+            position: absolute;
+        }
+
+        blockquote {
+            border-left: 5px solid #e7e9ec;
+            font-size: 14px;
+        }
+
+        em {
+            color: #95a5a6;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h4 span:first-child {
+            color: #000;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 750px;
+            padding: 0 30px;
+        }
+
+        .col-sm-6 {
+            margin-bottom: 10px;
+        }
+
+        .col-sm-12 h4 {
+            margin-top: 12px;
+        }
+
+        .col-sm-12 + .col-sm-12 {
+            margin-top: 30px;
+        }
+
+        #header {
+            background: #F9F9F9;
+            padding: 50px 0;
+            margin-bottom: 30px;
+        }
+
+        #header h2 {
+            color: #AFBFC9;
+            font-size: 24px;
+        }
+
+        #content h3 {
+            color:#C00019;
+            font-size: 26px;
+            margin-top: -4px;
+        }
+
+        #content aside {
+            text-align: right;
+            padding-right: 30px;
+        }
+
+        #profiles .network {
+            text-transform: capitalize;
+        }
+
+        #work .position,
+        #volunteer .position {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        #education .area {
+            font-weight: bold;
+        }
+
+        #education .area:before {
+            content: "\f0d7";
+            font: 16px Octicons;
+            margin-right: 6px;
+        }
+
+        #education .studyType {
+            margin-left: 25px;
+            padding-bottom: 5px;
+        }
+
+        .summary {
+            margin-top: 5px;
+            padding-bottom: 10px;
+        }
+
+        #publications .website a:before {
+            content: attr(href);
+        }
+
+        @media (min-width: 480px) {
+            .strike-through {
+                border-top: 1px solid #f4f6f6;
+                height: 20px;
+                margin-top: 12px;
+                margin-bottom: -2px;
+                position: relative;
+            }
+
+            .strike-through span,
+            .strike-through a {
+                background: #fff;
+                position: absolute;
+            }
+
+            .strike-through span:first-child {
+                padding-right: 20px;
+                margin-top: -12px;
+            }
+
+            .strike-through span + span {
+                font-size: 14px;
+                margin-top: -10px;
+                padding-left: 20px;
+                right: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .col-sm-6:last-child {
+                margin-bottom: 0px;
+            }
+
+            #content aside {
+                margin-bottom: 20px;
+                padding-right: 0;
+                text-align: left;
+            }
+
+            #publications .website a:before {
+                content: "View publication";
+            }
+        }
+
+        @media (max-width: 480px) {
+            .date {
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+
+            .strike-through span:first-child {
+                margin-bottom: 7px;
+            }
+
+            .strike-through span {
+                display: block;
+            }
+
+            #header {
+                margin-bottom: 10px;
+                padding: 40px 0;
+            }
+
+            #actions {
+                display: none;
+            }
+        }
+
+        @media print {
+            body{
+                margin: 1.5cm;
+                font-size: 12px;
+            }
+            h1{
+                font-size: 30px;
+            }
+            h2{
+                font-size: 16px;
+            }
+            h3{
+                font-size: 14px;
+                color:#C00019;
+            }
+            h4{
+                font-size: 14px;
+            }
+            #header{
+                padding-top: 0;
+                padding-bottom: 5px;
+                margin: 0;
+                text-align: center;
+            }
+            #contact{
+                margin-top: 0;
+            }
+            #education .highlights{
+                display: none;
+            }
+            #skills{
+                page-break-after: always;
+            }
+            #references{
+                margin-bottom: 0;
+            }
+            section{
+                margin-top: 15px;
+            }
+
+            blockquote{
+                border: none;
+                border-left: 5px solid #e7e9ec;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+<header id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-sm-push-3">
+                <h1>
+                    Frédérique Fortier
+                </h1>
+                <h2>
+                    Intégratrice / Designer Web
+                </h2>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="content" class="container">
+
+    <section id="contact" class="row">
+        <aside class="col-sm-3">
+            <h3>Contact</h3>
+        </aside>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="col-sm-6">
+                    <strong>Courriel</strong>
+                    <div class="email">frederika.fred@gmail.com</div>
+                </div>
+                <div class="col-sm-6">
+                    <strong>Téléphone</strong>
+                    <div class="phone">(418) 952-1308</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="row">
+        <aside class="col-sm-3">
+            <h3>À propos</h3>
+        </aside>
+        <div class="col-sm-9">
+            <p>Organisée et créative, joindre votre équipe serait pour moi la manière parfaite de poursuivre mes apprentissages.</p>
+        </div>
+    </section>
+
+    <section id="education" class="row">
+        <aside class="col-sm-3">
+            <h3>Formation académique</h3>
+        </aside>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4 class="strike-through">
+                        <span>Cégep de Sainte-Foy</span>
+                        <span class="date">
+						2017 — ...
+					    </span>
+                    </h4>
+                    <div>
+                        <div class="area">
+                            Techniques d'intégration multimédia - Web et Apps
+                        </div>
+                        <div class="studyType">
+                            Études collégiales (2018 - ...)
+                        </div>
+                        <ul class="highlights">
+                            <li class="bullet">Design d'interface II</li>
+                            <li class="bullet">Intégration II</li>
+                            <li class="bullet">Programmation Web et multimédia I</li>
+                            <li class="bullet">Montage médiatique : animation</li>
+                        </ul>
+                    </div>
+                    <div class="area">
+                        Arts Visuels
+                    </div>
+                    <div class="studyType">
+                        Études collégiales (2017 - 2018)
+                    </div>
+                    <ul class="highlights">
+                        <li class="bullet">Images numériques : Connaître et explorer</li>
+                        <li class="bullet">Images photographiques : explorer et exprimer</li>
+                        <li class="bullet">Dessin II : explorer et exprimer</li>
+                        <li class="bullet">Peinture et couleur II : Évoquer et exprimer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="row">
+        <aside class="col-sm-3">
+            <h3>Compétences</h3>
+        </aside>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="name">
+                        <h4>Intégration Web</h4>
+                    </div>
+                    <ul class="keywords">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <div class="name">
+                        <h4>Traitement et optimisation des médias</h4>
+                    </div>
+                    <ul class="keywords">
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Sketch</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <div class="name">
+                        <h4>Animation</h4>
+                    </div>
+                    <ul class="keywords">
+                        <li>Adobe Animate</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="row">
+        <aside class="col-sm-3">
+            <h3>Expériences de travail</h3>
+        </aside>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4 class="strike-through">
+                        <span>Restaurant Le Cochon Dingue</span>
+                        <span class="date">
+						Avril 2018 — ...
+					</span>
+                    </h4>
+                    <div class="position">
+                        Soutien
+                    </div>
+                    <ul class="highlights">
+                        <li class="bullet">Préparer les différentes sortes de café dans les règles de l'art</li>
+                        <li class="bullet">Accueillir les clients et les asseoir</li>
+                        <li class="bullet">Gérer les réservations</li>
+                        <li class="bullet">Prêter main-forte aux serveurs pour servir les plats</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="row">
+        <aside class="col-sm-3">
+            <h3>Réalisations</h3>
+        </aside>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4 class="strike-through">
+                        <span>Programme Explore à Toronto</span>
+                        <span class="date">Été 2017</span>
+                    </h4>
+                    <div class="summary">
+                        Immersion anglaise d'une durée de 5 semaines
+                    </div>
+                    <h4 class="strike-through">
+                        <span>Stage de coopération et d’éveil culturel</span>
+                        <span class="date">Février 2017</span>
+                    </h4>
+                    <div class="summary">
+                        Immersion dans la vie quotidienne du village de Patzaj, au Guatemala, durant 2 semaines
+                    </div>
+                    <h4 class="strike-through">
+                        <span>Voyage-échange en Espagne</span>
+                        <span class="date">2015-2016</span>
+                    </h4>
+                    <div class="summary">
+                        Immersion culturelle et lingustique dans un environnement espagnol durant 3 mois, puis accueil d'une espagnole chez moi durant 3 mois
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="languages" class="row">
+        <aside class="col-sm-3">
+            <h3>Langues</h3>
+        </aside>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="language">
+                        <strong>Français</strong>
+                    </div>
+                    <div class="fluency">
+                        Langue maternelle
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="language">
+                        <strong>Anglais</strong>
+                    </div>
+                    <div class="fluency">
+                        Fonctionnel à l'oral et à l'écrit
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interests" class="row">
+        <aside class="col-sm-3">
+            <h3>Intérêts</h3>
+        </aside>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="name">
+                        <h4>Histoire de l'art</h4>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="name">
+                        <h4>Dessin / Peinture</h4>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="name">
+                        <h4>Voyages</h4>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="name">
+                        <h4>Informatique</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="references" class="row">
+        <aside class="col-sm-3">
+            <h3>Références</h3>
+        </aside>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote class="reference">
+                        <p>Disponibles sur demande</p>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
